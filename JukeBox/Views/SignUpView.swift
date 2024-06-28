@@ -12,62 +12,76 @@ struct SignUpView: View {
     @State private var password: String = ""
     @State private var confirmPassword: String = ""
     @State private var errorMessage: String = ""
-
+    
     var body: some View {
-        VStack {
-            Image("jukebox")
-                .resizable()
-                .scaledToFit()
-                .frame(height: 150)
-                .padding(.bottom, 20)
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color("WoWBackgroundTop"), Color("WoWBackgroundBottom")]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             
-            TextField("Username", text: $username)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(5.0)
+            VStack {
+                Image("jukebox")
+                    .resizable()
+                    .scaledToFill()
+                    .frame(height: 300)
+                    .padding(.bottom, 20)
+                    .cornerRadius(10.0)
+                
+                TextField("x", text: $username, prompt: Text("Username")
+                    .foregroundColor(.gray))
+                    .padding(10)
+                    .background(Color("WoWBackgroundTop").opacity(0.8))
+                    .cornerRadius(10.0)
+                    .padding(.bottom, 10)
+                    .foregroundColor(Color("WoWGold"))
+                    .font(.title3)
+                
+                SecureField("x", text: $password, prompt: Text("Password")
+                    .foregroundColor(.gray))
+                    .padding(10)
+                    .background(Color("WoWBackgroundTop").opacity(0.8))
+                    .cornerRadius(10.0)
+                    .padding(.bottom, 10)
+                    .foregroundColor(Color("WoWGold"))
+                    .font(.title3)
+                
+                SecureField("x", text: $confirmPassword, prompt: Text("Confirm Password")
+                    .foregroundColor(.gray))
+                    .padding(10)
+                    .background(Color("WoWBackgroundTop").opacity(0.8))
+                    .cornerRadius(10.0)
+                    .padding(.bottom, 10)
+                    .foregroundColor(Color("WoWGold"))
+                    .font(.title3)
+                
+                Button(action: {
+                    signUp()
+                }) {
+                    Text("Enregistrer")
+                        .font(.headline)
+                        .foregroundColor(.white)
+                        .padding()
+                        .frame(width: 220, height: 60)
+                        .background(Color("WoWBlue"))
+                        .cornerRadius(15.0)
+                }
                 .padding(.bottom, 20)
-            
-            SecureField("Password", text: $password)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            
-            SecureField("Confirm Password", text: $confirmPassword)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(5.0)
-                .padding(.bottom, 20)
-            
-            Button(action: {
-                signUp()
-            }) {
-                Text("Sign Up")
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(width: 220, height: 60)
-                    .background(Color.green)
-                    .cornerRadius(15.0)
+                
+                if !errorMessage.isEmpty {
+                    Text(errorMessage)
+                        .foregroundColor(Color("WoWRed"))
+                        .padding()
+                }
             }
-            .padding(.bottom, 20)
-
-            if !errorMessage.isEmpty {
-                Text(errorMessage)
-                    .foregroundColor(.red)
-                    .padding()
-            }
+            .padding()
         }
-        .padding()
-        .background(LinearGradient(gradient: Gradient(colors: [Color("WoWBackgroundTop"), Color("WoWBackgroundBottom")]), startPoint: .top, endPoint: .bottom).edgesIgnoringSafeArea(.all))
     }
-
+    
     func signUp() {
         guard password == confirmPassword else {
             errorMessage = "Passwords do not match."
             return
         }
-
+        
         let userDefaults = UserDefaults.standard
         userDefaults.set(password, forKey: username)
         errorMessage = "User signed up successfully."

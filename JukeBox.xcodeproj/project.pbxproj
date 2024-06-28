@@ -30,7 +30,10 @@
 		357E0CD52C2AEEA3009FDAB4 /* Stormwind.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 357E0CCC2C2AEEA3009FDAB4 /* Stormwind.mp3 */; };
 		357E0CD62C2AEEA3009FDAB4 /* Elwynn_Forest.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 357E0CCD2C2AEEA3009FDAB4 /* Elwynn_Forest.mp3 */; };
 		357E0CD72C2AEEA3009FDAB4 /* Zuldazar.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 357E0CCE2C2AEEA3009FDAB4 /* Zuldazar.mp3 */; };
-		357E0CD92C2AFFDD009FDAB4 /* SwiftUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 357E0CD82C2AFFDD009FDAB4 /* SwiftUI.swift */; };
+		358C2DBB2C2ED91500E368C4 /* Karazhan_Opera.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 358C2DBA2C2ED91500E368C4 /* Karazhan_Opera.mp3 */; };
+		358C2DBD2C2ED91D00E368C4 /* Icecrown_Citadel.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 358C2DBC2C2ED91C00E368C4 /* Icecrown_Citadel.mp3 */; };
+		358C2DBF2C2ED92400E368C4 /* Mechagon_Dungeon.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 358C2DBE2C2ED92400E368C4 /* Mechagon_Dungeon.mp3 */; };
+		358C2DC12C2ED92B00E368C4 /* Waycrest_Manor.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 358C2DC02C2ED92B00E368C4 /* Waycrest_Manor.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,7 +61,10 @@
 		357E0CCC2C2AEEA3009FDAB4 /* Stormwind.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Stormwind.mp3; sourceTree = "<group>"; };
 		357E0CCD2C2AEEA3009FDAB4 /* Elwynn_Forest.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Elwynn_Forest.mp3; sourceTree = "<group>"; };
 		357E0CCE2C2AEEA3009FDAB4 /* Zuldazar.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Zuldazar.mp3; sourceTree = "<group>"; };
-		357E0CD82C2AFFDD009FDAB4 /* SwiftUI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUI.swift; sourceTree = "<group>"; };
+		358C2DBA2C2ED91500E368C4 /* Karazhan_Opera.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Karazhan_Opera.mp3; sourceTree = "<group>"; };
+		358C2DBC2C2ED91C00E368C4 /* Icecrown_Citadel.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Icecrown_Citadel.mp3; sourceTree = "<group>"; };
+		358C2DBE2C2ED92400E368C4 /* Mechagon_Dungeon.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Mechagon_Dungeon.mp3; sourceTree = "<group>"; };
+		358C2DC02C2ED92B00E368C4 /* Waycrest_Manor.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Waycrest_Manor.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,6 +97,7 @@
 		357E0C9C2C2AEB50009FDAB4 /* JukeBox */ = {
 			isa = PBXGroup;
 			children = (
+				357E0CC02C2AED34009FDAB4 /* Struct_Music.swift */,
 				357E0C9D2C2AEB50009FDAB4 /* JukeBoxApp.swift */,
 				357E0C9F2C2AEB50009FDAB4 /* ContentView.swift */,
 				357E0CBB2C2AECF9009FDAB4 /* Models */,
@@ -127,8 +134,12 @@
 			isa = PBXGroup;
 			children = (
 				357E0CC82C2AEEA3009FDAB4 /* Ardenweald.mp3 */,
+				358C2DBA2C2ED91500E368C4 /* Karazhan_Opera.mp3 */,
 				357E0CC72C2AEEA3009FDAB4 /* Durotar.mp3 */,
 				357E0CCD2C2AEEA3009FDAB4 /* Elwynn_Forest.mp3 */,
+				358C2DBC2C2ED91C00E368C4 /* Icecrown_Citadel.mp3 */,
+				358C2DC02C2ED92B00E368C4 /* Waycrest_Manor.mp3 */,
+				358C2DBE2C2ED92400E368C4 /* Mechagon_Dungeon.mp3 */,
 				357E0CCA2C2AEEA3009FDAB4 /* Grizzly_Hills.mp3 */,
 				357E0CC92C2AEEA3009FDAB4 /* Nazjatar.mp3 */,
 				357E0CCB2C2AEEA3009FDAB4 /* Orgrimmar.mp3 */,
@@ -143,10 +154,8 @@
 			isa = PBXGroup;
 			children = (
 				357E0CBE2C2AED21009FDAB4 /* AVDelegate.swift */,
-				357E0CC02C2AED34009FDAB4 /* Struct_Music.swift */,
 				357E0CC22C2AED4B009FDAB4 /* User.swift */,
 				357E0CC42C2AED63009FDAB4 /* UserDefaults.swift */,
-				357E0CD82C2AFFDD009FDAB4 /* SwiftUI.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -213,12 +222,16 @@
 			files = (
 				357E0CD62C2AEEA3009FDAB4 /* Elwynn_Forest.mp3 in Resources */,
 				357E0CD72C2AEEA3009FDAB4 /* Zuldazar.mp3 in Resources */,
+				358C2DBB2C2ED91500E368C4 /* Karazhan_Opera.mp3 in Resources */,
 				357E0CD12C2AEEA3009FDAB4 /* Ardenweald.mp3 in Resources */,
 				357E0CCF2C2AEEA3009FDAB4 /* Teldrassil.mp3 in Resources */,
+				358C2DC12C2ED92B00E368C4 /* Waycrest_Manor.mp3 in Resources */,
 				357E0CD32C2AEEA3009FDAB4 /* Grizzly_Hills.mp3 in Resources */,
 				357E0CD42C2AEEA3009FDAB4 /* Orgrimmar.mp3 in Resources */,
 				357E0CA72C2AEB52009FDAB4 /* Preview Assets.xcassets in Resources */,
 				357E0CD02C2AEEA3009FDAB4 /* Durotar.mp3 in Resources */,
+				358C2DBF2C2ED92400E368C4 /* Mechagon_Dungeon.mp3 in Resources */,
+				358C2DBD2C2ED91D00E368C4 /* Icecrown_Citadel.mp3 in Resources */,
 				357E0CA42C2AEB52009FDAB4 /* Assets.xcassets in Resources */,
 				357E0CD22C2AEEA3009FDAB4 /* Nazjatar.mp3 in Resources */,
 				357E0CD52C2AEEA3009FDAB4 /* Stormwind.mp3 in Resources */,
@@ -241,7 +254,6 @@
 				357E0CB42C2AEC35009FDAB4 /* MusicLibrary.swift in Sources */,
 				357E0CBF2C2AED21009FDAB4 /* AVDelegate.swift in Sources */,
 				357E0CC52C2AED63009FDAB4 /* UserDefaults.swift in Sources */,
-				357E0CD92C2AFFDD009FDAB4 /* SwiftUI.swift in Sources */,
 				357E0CBA2C2AEC67009FDAB4 /* PlaylistsView.swift in Sources */,
 				357E0CB22C2AEC26009FDAB4 /* MusicDetailsView.swift in Sources */,
 				357E0CC32C2AED4B009FDAB4 /* User.swift in Sources */,

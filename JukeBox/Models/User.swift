@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import SwiftUI
 
 class User: ObservableObject, Identifiable {
     @Published var name: String

@@ -17,50 +17,55 @@ struct MusicDetailView: View {
     @State private var isPlaying = false
     
     var body: some View {
-        VStack(alignment: .leading) {
-            Text(music.title)
-                .font(.largeTitle)
-                .foregroundColor(Color("WoWBackgroundBottom"))
-                .padding()
-            Text("Zone: \(music.zone)")
-                .font(.headline)
-                .foregroundColor(Color("WoWGold"))
-                .padding()
-            Text("Composer: \(music.composer)")
-                .font(.subheadline)
-                .foregroundColor(Color("WoWSecondary"))
-                .padding()
-            Text(music.description)
-                .foregroundColor(Color("WoWSecondary"))
-                .padding()
+        ZStack {
+            LinearGradient(gradient: Gradient(colors: [Color("WoWSecondary"), Color("WoWBackgroundBottom")]), startPoint: .top, endPoint: .bottom)
+                .edgesIgnoringSafeArea(.all)
             
-            HStack {
-                Picker("Add to Playlist", selection: $selectedPlaylist) {
-                    ForEach(user.playlists.keys.sorted(), id: \.self) { playlist in
-                        Text(playlist)
-                            .foregroundColor(.white)
-                            .font(.headline)
-                            .foregroundColor(Color("WoWGold"))
+            VStack(alignment: .leading) {
+                Text(music.title)
+                    .font(.largeTitle)
+                    .foregroundColor(Color("WoWBackgroundBottom"))
+                    .padding()
+                Text("Zone: \(music.zone)")
+                    .font(.headline)
+                    .foregroundColor(Color("WoWGold"))
+                    .padding()
+                Text("Composer: \(music.composer)")
+                    .font(.subheadline)
+                    .foregroundColor(Color("WoWSecondary"))
+                    .padding()
+                Text(music.description)
+                    .foregroundColor(Color("WoWSecondary"))
+                    .padding()
+                
+                HStack {
+                    Picker("Add to Playlist", selection: $selectedPlaylist) {
+                        ForEach(user.playlists.keys.sorted(), id: \.self) { playlist in
+                            Text(playlist)
+                                .foregroundColor(.white)
+                                .font(.headline)
+                                .foregroundColor(Color("WoWGold"))
+                        }
                     }
+                    .pickerStyle(SegmentedPickerStyle())
+                    .padding()
                 }
-                .pickerStyle(SegmentedPickerStyle())
-                .padding()
-            }
-            
-            HStack {
-                Spacer()
-                Button("Add to \(selectedPlaylist) Playlist") {
-                    user.addToPlaylist(selectedPlaylist, music: music)
+                
+                HStack {
+                    Spacer()
+                    Button("Add to \(selectedPlaylist) Playlist") {
+                        user.addToPlaylist(selectedPlaylist, music: music)
+                    }
+                    .padding()
+                    .background(Color("WoWGold"))
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    Spacer()
                 }
                 .padding()
-                .background(Color("WoWGold"))
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                Spacer()
             }
             .padding()
         }
-        .background(LinearGradient(gradient: Gradient(colors: [Color("WoWSecondary"), Color("WoWBackgroundBottom")]), startPoint: .top, endPoint: .bottom))
         .navigationTitle(music.title)
         .transition(.slide)
         .animation(.default)

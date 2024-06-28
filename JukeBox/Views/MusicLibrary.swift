@@ -18,7 +18,11 @@ class MusicLibrary: ObservableObject {
         Music(title: "Grizzly Hills", zone: "Grizzly Hills", composer: "Russell Brower", description: "The rustic and evocative theme from the Grizzly Hills in Northrend.", filename: "Grizzly_Hills.mp3"),
         Music(title: "Zuldazar", zone: "Zuldazar", composer: "Neal Acree", description: "The vibrant and exotic theme of Zuldazar.", filename: "Zuldazar.mp3"),
         Music(title: "Nazjatar", zone: "Nazjatar", composer: "Glenn Stafford", description: "The eerie and mysterious theme of the underwater zone Nazjatar.", filename: "Nazjatar.mp3"),
-        Music(title: "Ardenweald", zone: "Ardenweald", composer: "Glenn Stafford", description: "The ethereal and enchanting theme of Ardenweald.", filename: "Ardenweald.mp3")
+        Music(title: "Ardenweald", zone: "Ardenweald", composer: "Glenn Stafford", description: "The ethereal and enchanting theme of Ardenweald.", filename: "Ardenweald.mp3"),
+        Music(title: "Opera House", zone: "Karazhan", composer: "Russell Brower", description: "The dramatic and iconic theme of the Opera House in Karazhan.", filename: "Karazhan_Opera.mp3"),
+        Music(title: "Waycrest Manor", zone: "Drustvar", composer: "Glenn Stafford", description: "The haunting and atmospheric theme of the Waycrest Manor.", filename: "Waycrest_Manor.mp3"),
+        Music(title: "Icecrown Citadel", zone: "Icecrown", composer: "Russell Brower", description: "The dark and imposing theme of Icecrown Citadel.", filename: "Icecrown_Citadel.mp3"),
+        Music(title: "Mechagon Dungeon", zone: "Mechagon", composer: "Neal Acree", description: "The mechanical and quirky theme of the Mechagon Dungeon.", filename: "Mechagon_Dungeon.mp3")
         // Add more music here
     ]
 }
